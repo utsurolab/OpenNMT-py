@@ -6,7 +6,7 @@ import math
 from collections import Counter, defaultdict, OrderedDict
 
 import torch
-from torchtext.data import Field, RawField, LabelField
+from torchtext.legacy.data import Field, RawField, LabelField
 from torchtext.vocab import Vocab
 
 from onmt.constants import DefaultTokens, ModelTask
@@ -126,7 +126,7 @@ def get_fields(
     Args:
         src_data_type: type of the source input. Options are [text].
         src_feats (Optional[Dict]): source features dict containing their names
-            to create a :class:`torchtext.data.Field` for. (If
+            to create a :class:`torchtext.legacy.data.Field` for. (If
             ``src_data_type=="text"``, these fields are stored together
             as a ``TextMultiField``).
         tgt_feats (Optional[Dict]): See above.
@@ -245,7 +245,7 @@ def filter_example(ex, use_src_len=True, use_tgt_len=True,
     for all keyword arguments.
 
     Args:
-        ex (torchtext.data.Example): An object with a ``src`` and ``tgt``
+        ex (torchtext.legacy.data.Example): An object with a ``src`` and ``tgt``
             property.
         use_src_len (bool): Filter based on the length of ``ex.src``.
         use_tgt_len (bool): Similar to above.
