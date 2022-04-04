@@ -7,7 +7,7 @@ from collections import Counter, defaultdict, OrderedDict
 
 import torch
 from torchtext.legacy.data import Field, RawField, LabelField
-from torchtext.vocab import Vocab
+from torchtext.legacy.vocab import Vocab
 
 from onmt.constants import DefaultTokens, ModelTask
 from onmt.inputters.text_dataset import text_fields
